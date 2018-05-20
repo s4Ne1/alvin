@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.s4ne.alvin.Controller">
+   <top>
+       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <Label text="Algorithm:" />
+           <ComboBox fx:id="comboBox" onAction="#onComboBoxChanged" prefWidth="200.0" />
+         <Label layoutX="10.0" layoutY="16.0" text="Problem size (n):">
+            <padding>
+               <Insets left="8.0" />
+            </padding>
+         </Label>
+         <Spinner fx:id="spinner" prefWidth="64.0" />
+           <Pane HBox.hgrow="ALWAYS" />
+           <Button fx:id="stepButton" mnemonicParsing="false" onAction="#onButtonStep" text="Step" />
+           <Button mnemonicParsing="false" onAction="#onButtonReset" text="Reset" />
+       </ToolBar>
+   </top>
+   <center>
+       <SplitPane dividerPositions="0.75" orientation="VERTICAL" BorderPane.alignment="CENTER">
+           <ScrollPane pannable="true">
+               <Canvas fx:id="canvas" height="600.0" width="800.0" />
+           </ScrollPane>
+           <TextArea fx:id="textArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="200.0" />
+       </SplitPane>
+   </center>
+</BorderPane>
